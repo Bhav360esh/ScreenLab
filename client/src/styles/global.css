@@ -1,0 +1,351 @@
+body{
+    margin:0;
+    background:#0f171e;
+    color:white;
+    font-family:Arial;
+    }
+    
+    .navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 60px;
+    background:#0f171e;
+    }
+    
+    .navLinks a{
+    margin-left:20px;
+    color:white;
+    text-decoration:none;
+    }
+    
+    .heroBanner{
+    height:70vh;
+    background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    padding-left:100px;
+    }
+    
+    .carouselSection{
+    padding:40px 60px;
+    }
+    
+    .poster{
+    width:180px;
+    border-radius:8px;
+    transition:0.3s;
+    }
+    
+    .poster:hover{
+    transform:scale(1.1);
+    }
+    
+    .statsSection{
+    display:flex;
+    justify-content:space-around;
+    padding:50px;
+    background:#111;
+    }
+    
+    .graphSection{
+    padding:60px;
+    }
+    
+    .featuresSection{
+    padding:60px;
+    }
+    
+    .featureGrid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    }
+    
+    .featureCard{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:8px;
+    }
+    
+    .footer{
+    background:#0b0f14;
+    padding:50px;
+    }
+    
+    .footerGrid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    }
+    
+    .page{
+    padding:80px;
+    }
+    
+    .pricing{
+    display:flex;
+    gap:30px;
+    }
+    
+    .plan{
+    background:#1c1c1c;
+    padding:30px;
+    border-radius:10px;
+    }
+
+    .sectionTitle{
+        font-size:32px;
+        margin-bottom:10px;
+        text-align:center;
+        }
+        
+        .sectionSubtitle{
+        text-align:center;
+        opacity:0.7;
+        margin-bottom:40px;
+        }
+        
+        .featureGrid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:25px;
+        }
+        
+        .featureCard{
+        background:#1c1c1c;
+        padding:30px;
+        border-radius:12px;
+        transition:0.3s;
+        border:1px solid rgba(255,255,255,0.05);
+        }
+        
+        .featureCard:hover{
+        transform:translateY(-6px);
+        border-color:#00A8E1;
+        box-shadow:0 10px 25px rgba(0,168,225,0.2);
+        }
+        
+        .featureIcon{
+        color:#00A8E1;
+        margin-bottom:15px;
+        }
+        
+        .featureCard h3{
+        margin-bottom:10px;
+        }
+        
+        .featureCard p{
+        opacity:0.8;
+        font-size:14px;
+        }
+        
+        .featureBtn{
+        margin-top:15px;
+        background:#00A8E1;
+        border:none;
+        padding:10px 18px;
+        color:white;
+        border-radius:6px;
+        cursor:pointer;
+        }
+        
+        .featureBtn:hover{
+        background:#0077a3;
+        }
+
+        .analyticsSection{
+            padding:60px;
+            background:#111;
+            }
+            
+            .graphGrid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+            gap:30px;
+            margin-top:40px;
+            }
+            
+            .graphCard{
+            background:#1c1c1c;
+            padding:25px;
+            border-radius:12px;
+            border:1px solid rgba(255,255,255,0.05);
+            transition:0.3s;
+            }
+            
+            .graphCard:hover{
+            transform:translateY(-5px);
+            border-color:#00A8E1;
+            box-shadow:0 10px 25px rgba(0,168,225,0.2);
+            }
+            
+            .graphCard h3{
+            margin-bottom:20px;
+            font-size:18px;
+            }
+
+            .posterContainer{
+                position:relative;
+                width:200px;
+                height:300px;   /* Prime Video poster ratio */
+                margin-right:15px;
+                flex-shrink:0;
+                }
+                
+                .poster{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:8px;
+                transition:0.3s;
+                }
+                
+                .poster:hover{
+                transform:scale(1.05);
+                }
+                
+                .posterOverlay{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:rgba(0,0,0,0.6);
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                opacity:0;
+                border-radius:8px;
+                transition:0.3s;
+                }
+                
+                .posterContainer:hover .posterOverlay{
+                opacity:1;
+                }
+
+                .heroBanner{
+
+                    height:85vh;
+                    display:flex;
+                    align-items:center;
+                    
+                    background:linear-gradient(
+                    135deg,
+                    #0f171e,
+                    #0b0f14
+                    );
+                    
+                    padding:0 80px;
+                    
+                    }
+                    
+                    .heroContentWrapper{
+                    
+                    display:flex;
+                    justify-content:space-between;
+                    width:100%;
+                    align-items:center;
+                    
+                    }
+                    
+                    /* LEFT SIDE */
+                    
+                    .heroLeft{
+                    max-width:550px;
+                    }
+                    
+                    .heroTitle{
+                    font-size:60px;
+                    font-weight:bold;
+                    margin-bottom:10px;
+                    }
+                    
+                    .heroSubtitle{
+                    opacity:0.8;
+                    line-height:1.6;
+                    margin-bottom:30px;
+                    }
+                    
+                    .heroStats{
+                    
+                    display:flex;
+                    gap:40px;
+                    margin-bottom:30px;
+                    
+                    }
+                    
+                    .heroStats h2{
+                    color:#00A8E1;
+                    }
+                    
+                    /* BUTTONS */
+                    
+                    .heroButtons{
+                    display:flex;
+                    gap:20px;
+                    }
+                    
+                    .primaryBtn{
+                    
+                    background:#00A8E1;
+                    padding:12px 24px;
+                    border:none;
+                    border-radius:6px;
+                    color:white;
+                    cursor:pointer;
+                    display:flex;
+                    align-items:center;
+                    gap:10px;
+                    
+                    }
+                    
+                    .secondaryBtn{
+                    
+                    background:#1c1c1c;
+                    padding:12px 24px;
+                    border:none;
+                    border-radius:6px;
+                    color:white;
+                    cursor:pointer;
+                    display:flex;
+                    align-items:center;
+                    gap:10px;
+                    
+                    }
+                    
+                    /* RIGHT SIDE */
+                    
+                    .heroRight{
+                    
+                    position:relative;
+                    width:400px;
+                    height:400px;
+                    
+                    }
+                    
+                    .heroImage{
+                    
+                    position:absolute;
+                    width:180px;
+                    height:260px;
+                    object-fit:cover;
+                    border-radius:10px;
+                    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+                    
+                    }
+                    
+                    .img1{
+                    top:0;
+                    left:0;
+                    }
+                    
+                    .img2{
+                    top:100px;
+                    right:0;
+                    }
+                    
+                    .img3{
+                    bottom:0;
+                    left:120px;
+                    }
