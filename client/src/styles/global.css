@@ -558,3 +558,73 @@ border:1px solid rgba(255,255,255,0.05);
 color:#00A8E1;
 margin:10px 0;
 }
+
+/* MODERN TOPBAR */
+
+.modernTopbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 50px;
+
+background:rgba(15,23,30,0.9);
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(255,255,255,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* LOGO */
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:white;
+letter-spacing:1px;
+}
+
+/* BUTTON BASE */
+
+.modernBtn{
+padding:10px 20px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+font-size:14px;
+transition:all 0.3s ease;
+}
+
+/* LOGIN BUTTON */
+
+.loginBtn{
+background:transparent;
+color:white;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+.loginBtn:hover{
+background:rgba(255,255,255,0.1);
+border-color:#00A8E1;
+color:#00A8E1;
+}
+
+/* PRIMARY BUTTON */
+
+.primaryBtn{
+background:#00A8E1;
+color:white;
+box-shadow:0 4px 15px rgba(0,168,225,0.3);
+}
+
+.primaryBtn:hover{
+background:#0090c0;
+transform:translateY(-2px);
+box-shadow:0 8px 25px rgba(0,168,225,0.5);
+}
+
+.topActions{
+display: flex;
+align-items: center;
+}

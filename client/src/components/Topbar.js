@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
+import "../styles/global.css";
 
 function Topbar() {
   return (
-    <div className="topbar">
+    <div className="topbar modernTopbar">
 
-      <h2>ScreenLab</h2>
+      <h2 className="logo">ScreenLab</h2>
 
       <div className="topActions">
 
         <Link to="/login">
-          <button className="loginBtn">Login</button>
+          <button className="loginBtn modernBtn">
+            Login
+          </button>
         </Link>
 
         <Link to="/signup">
-          <button className="signupBtn">Sign Up</button>
+          <button className="signupBtn modernBtn primaryBtn">
+            Sign Up
+          </button>
         </Link>
 
       </div>
