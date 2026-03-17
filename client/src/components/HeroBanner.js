@@ -1,95 +1,108 @@
-import "../styles/global.css"
-import { motion } from "framer-motion"
-import { FaPlay, FaChartBar } from "react-icons/fa"
+import "../styles/global.css";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import AuthModal from "../components/AuthModal";
 
-function HeroBanner(){
+function HeroBanner() {
 
-return(
+    
+    const [isOpen, setIsOpen] = useState(false);
+    const [role, setRole] = useState("audience");
 
-<div className="heroBanner">
+    return (
+        <div className="heroContainer">
 
-<div className="heroContentWrapper">
+            {/* LEFT SIDE */}
+            <div className="heroLeft">
 
-{/* LEFT SIDE */}
+                <h1>
+                    Test Films & Ads <br /> Before Launch 🚀
+                </h1>
 
-<div className="heroLeft">
+                <p>
+                    ScreenLab lets you validate content with real audiences,
+                    analyze engagement, and optimize campaigns.
+                </p>
 
-<h1 className="heroTitle">
-ScreenLab
-</h1>
+                <div className="heroButtons">
 
-<p className="heroSubtitle">
-The audience testing platform for filmmakers,
-brands and creators to analyze audience reactions
-before content release.
-</p>
+                    <button
+                        className="primaryBtn"
+                        onClick={() => {
+                            setRole("audience");
+                            setIsOpen(true);
+                        }}
+                    >
+                        Join as Audience
+                    </button>
 
-<div className="heroStats">
+                    <button
+                        className="secondaryBtn"
+                        onClick={() => {
+                            setRole("creator");
+                            setIsOpen(true);
+                        }}
+                    >
+                        Join as Creator
+                    </button>
+                    <AuthModal
+                        isOpen={isOpen}
+                        onClose={() => setIsOpen(false)}
+                        defaultRole={role}
+                    />
 
-<div>
-<h2>45K+</h2>
-<p>Audience Testers</p>
-</div>
+                </div>
 
-<div>
-<h2>1200+</h2>
-<p>Creators</p>
-</div>
+            </div>
 
-<div>
-<h2>320+</h2>
-<p>Campaign Tests</p>
-</div>
+            {/* RIGHT SIDE VISUAL */}
+            <div className="heroVisual">
 
-</div>
+                {/* BIG SHAPE */}
+                <div className="mainVisual">
 
-<div className="heroButtons">
+                    {/* Animated images */}
+                    <motion.img
+                        src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+                        className="visualImg imgA"
+                        animate={{ y: [0, -20, 0] }}
+                        transition={{ duration: 6, repeat: Infinity }}
+                    />
 
-<button className="primaryBtn">
-<FaPlay/> Watch Demo
-</button>
+                    <motion.img
+                        src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg"
+                        className="visualImg imgB"
+                        animate={{ y: [0, 20, 0] }}
+                        transition={{ duration: 7, repeat: Infinity }}
+                    />
 
-<button className="secondaryBtn">
-<FaChartBar/> Start Testing
-</button>
+                    <motion.img
+                        src="https://image.tmdb.org/t/p/w500/k0ThmZQl5nHe4JefC2bXjqtgYp0.jpg"
+                        className="visualImg imgC"
+                        animate={{ y: [0, -25, 0] }}
+                        transition={{ duration: 5, repeat: Infinity }}
+                    />
 
-</div>
+                </div>
 
-</div>
+                {/* FLOATING ELEMENTS */}
 
-{/* RIGHT SIDE */}
+                <div className="floatingCard card1">
+                    ⭐ 4.5 Rating
+                </div>
 
-<div className="heroRight">
+                <div className="floatingCard card2">
+                    📊 92% Engagement
+                </div>
 
-<motion.img
-src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg"
-className="heroImage img1"
-animate={{ y:[0,-20,0] }}
-transition={{ duration:6, repeat:Infinity }}
-/>
+                <div className="floatingCard card3">
+                    🎬 1200+ Creators
+                </div>
 
-<motion.img
-src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg"
-className="heroImage img2"
-animate={{ y:[0,20,0] }}
-transition={{ duration:7, repeat:Infinity }}
-/>
+            </div>
 
-<motion.img
-src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg"
-className="heroImage img3"
-animate={{ y:[0,-25,0] }}
-transition={{ duration:5, repeat:Infinity }}
-/>
-
-</div>
-
-</div>
-
-</div>
-
-)
-
+        </div>
+    );
 }
 
-export default HeroBanner
+export default HeroBanner;
