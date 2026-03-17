@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "carousel": "^0.0.3",
+    "react-multi": "^0.0.5"
+  }
+}

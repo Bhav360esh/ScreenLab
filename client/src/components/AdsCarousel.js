@@ -30,7 +30,7 @@ return(
 
 <div className="posterContainer" key={index}>
 
-<img src={ad} className="poster"/>
+<img src={ad} alt="something" className="poster"/>
 
 <div className="posterOverlay">
 <p>Ad Feedback Given</p>
