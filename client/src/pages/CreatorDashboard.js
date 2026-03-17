@@ -11,7 +11,7 @@ return(
 
 <Topbar/>
 
-<h1 className="dashboardTitle">Creator Dashboard</h1>
+<h1 className="dashboardTitle About">Creator Dashboard</h1>
 
 <Filters/>
 <StatsCards/>

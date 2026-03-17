@@ -14,9 +14,10 @@ ScreenLab
 <div className="navLinks">
 
 <Link to="/">Home</Link>
-<Link to="/how">How It Works</Link>
-<Link to="/creators">Creators</Link>
-<Link to="/join">Join Audience</Link>
+<Link to="/about">About</Link>
+{/* <Link to="/how">How It Works</Link> */}
+<Link to="/creator">Creators</Link>
+<Link to="/audience">Join Audience</Link>
 
 </div>
 

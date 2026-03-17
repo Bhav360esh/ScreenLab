@@ -11,7 +11,7 @@ return(
 
 <Topbar/>
 
-<h1 className="dashboardTitle">
+<h1 className="dashboardTitle About">
 Audience Dashboard
 </h1>
 

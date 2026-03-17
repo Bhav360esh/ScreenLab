@@ -43,9 +43,11 @@ return(
 
 <HeroBanner/>
 
+<StatsSection/>
+
 <FeatureCards/>
 
-<StatsSection/>
+
 
 <PosterCarousel
 title="Trending Film Test Screenings"
@@ -57,10 +59,10 @@ title="Ad Campaign Testing"
 posters={adCampaigns}
 />
 
-<PosterCarousel
+{/* <PosterCarousel
 title="Trailer Feedback Testing"
 posters={trailers}
-/>
+/> */}
 
 
 

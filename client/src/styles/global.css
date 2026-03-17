@@ -942,3 +942,59 @@ font-size:14px;
 color:#00A8E1;
 cursor:pointer;
 }
+
+/* TEAM SECTION */
+
+.teamSection{
+padding:40px 60px;
+}
+
+.teamSection h2{
+margin-bottom:20px;
+}
+
+/* CARD */
+
+.teamCard{
+background:#1c1c1c;
+padding:20px;
+border-radius:12px;
+text-align:center;
+margin-right:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.teamCard:hover{
+transform:translateY(-8px);
+border-color:#00A8E1;
+box-shadow:0 10px 30px rgba(0,168,225,0.2);
+}
+
+/* IMAGE */
+
+.teamImg{
+width:120px;
+height:120px;
+border-radius:12px;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* TEXT */
+
+.role{
+color:#00A8E1;
+font-size:14px;
+}
+
+.company{
+font-size:13px;
+opacity:0.6;
+}
+.About{
+    padding-left: 35px;
+}
+.aboutDesc{
+    padding-left: 50px;
+}

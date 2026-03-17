@@ -7,6 +7,7 @@ import CreatorDashboard from "./pages/CreatorDashboard";
 import AudienceDashboard from "./pages/AudienceDashboard";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import About from "./pages/About";
 
 function Layout() {
 
@@ -23,6 +24,7 @@ function Layout() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/creator" element={<CreatorDashboard />} />
         <Route path="/audience" element={<AudienceDashboard />} />
         <Route path="/login" element={<Login />} />
