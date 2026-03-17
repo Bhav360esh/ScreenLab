@@ -1,33 +1,43 @@
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 
-import Home from "./pages/Home"
-import HowItWorks from "./pages/HowItWorks"
-import Creators from "./pages/Creators"
-import JoinAudience from "./pages/JoinAudience"
+import Home from "./pages/Home";
+import CreatorDashboard from "./pages/CreatorDashboard";
+import AudienceDashboard from "./pages/AudienceDashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
-function App(){
+function Layout() {
 
-return(
+  const location = useLocation();
 
-<BrowserRouter>
+  // Hide Navbar on dashboard routes
+  const hideNavbar =
+    location.pathname === "/creator" ||
+    location.pathname === "/audience";
 
-<Navbar/>
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
 
-<Routes>
-
-<Route path="/" element={<Home/>}/>
-<Route path="/how" element={<HowItWorks/>}/>
-<Route path="/creators" element={<Creators/>}/>
-<Route path="/join" element={<JoinAudience/>}/>
-
-</Routes>
-
-</BrowserRouter>
-
-)
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/creator" element={<CreatorDashboard />} />
+        <Route path="/audience" element={<AudienceDashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+  );
+}
+
+export default App;
