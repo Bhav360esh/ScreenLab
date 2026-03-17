@@ -35,7 +35,7 @@ const adCampaigns = [
 
 /* Trailer testing */
 
-const trailers = filmPosters
+// const trailers = filmPosters
 
 return(
 
