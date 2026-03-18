@@ -22,7 +22,7 @@ function StatsCards() {
 
       <div className="card">
         <h4>Feedback Collected</h4>
-        <h2>163K</h2>
+        <h2>35K</h2>
         <p>Responses</p>
       </div>
 

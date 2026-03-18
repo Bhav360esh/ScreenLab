@@ -2,6 +2,7 @@ import Topbar from "../components/Topbar";
 import Filters from "../components/Filters";
 import StatsCards from "../components/StatsCards";
 import Charts from "../components/Charts";
+import CreatorCampaigns from "../components/CreatorCampaigns";
 
 function CreatorDashboard(){
 
@@ -15,6 +16,7 @@ return(
 
 <Filters/>
 <StatsCards/>
+<CreatorCampaigns/>
 <Charts/>
 
 </div>

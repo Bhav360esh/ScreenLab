@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/global.css";
 
 function AuthModal({ isOpen, onClose, defaultRole }) {
 
   const [isLogin, setIsLogin] = useState(false);
-  const [role, setRole] = useState(defaultRole || "audience");
+  const [role, setRole] = useState("audience");
+
+  // 🔥 Sync role when modal opens (IMPORTANT FIX)
+  useEffect(() => {
+    if (defaultRole) {
+      setRole(defaultRole);
+    }
+    setIsLogin(false); // reset to signup when opened
+  }, [defaultRole, isOpen]);
 
   if (!isOpen) return null;
 
@@ -43,14 +51,14 @@ function AuthModal({ isOpen, onClose, defaultRole }) {
           <input placeholder="Full Name" />
         )}
 
-        <input placeholder="Email" />
+        <input placeholder="Email" type="email" />
         <input placeholder="Password" type="password" />
 
         <button className="submitBtn">
           {isLogin ? "Login" : "Sign Up"} as {role}
         </button>
 
-        {/* TOGGLE */}
+        {/* TOGGLE LOGIN / SIGNUP */}
 
         <p className="toggleText">
           {isLogin ? "Don't have an account?" : "Already have an account?"}
